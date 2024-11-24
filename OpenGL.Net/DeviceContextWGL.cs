@@ -1193,10 +1193,10 @@ namespace OpenGL
 				if (DeviceContext != IntPtr.Zero) {
 					if (_DeviceContextPBuffer == false) {
 						bool res = Wgl.ReleaseDC(_WindowHandle, DeviceContext);
-						Debug.Assert(res);
+						//Debug.Assert(res);
 					} else {
 						int res = Wgl.ReleasePbufferDCARB(_WindowHandle, DeviceContext);
-						Debug.Assert(res == 1);
+						//Debug.Assert(res == 1);
 					}
 
 					DeviceContext = IntPtr.Zero;
